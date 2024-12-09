@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="{% url 'meal_products' %}">Еда</a>
+<a href="{% url 'drink_products' %}">Напитки</a>
+
+{% for i in products %}
+
+<p>{{ i.name }}</p>
+<p>{{ i.price }}</p>
+
+{% endfor %}
+
+
+</body>
+</html>

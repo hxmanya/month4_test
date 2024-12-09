@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Всегда добавляем сюда новые стартапы
     'films_blog',
+    'foods_and_drinks',
 ]
 
 MIDDLEWARE = [
