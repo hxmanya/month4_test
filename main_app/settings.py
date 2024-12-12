@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     #Всегда добавляем сюда новые стартапы
     'films_blog',
     'foods_and_drinks',
+    'todo',
 ]
 
 MIDDLEWARE = [

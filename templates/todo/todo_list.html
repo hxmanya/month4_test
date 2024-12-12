@@ -1,0 +1,11 @@
+<ol>
+    {% for i in todo_list %}
+    <li>
+        <h1>{{ i.title }}</h1>
+        <p>{{ i.choice_check }}</p>
+        <a href="/todo_list/{{i.id}}/">Подробнее</a>
+        <a href="/todo_list/{{i.id}}/update/">Изменить</a>
+        <a href="/todo_list/{{i.id}}/delete/">Удалить</a>
+    </li>
+    {% endfor %}
+</ul>
