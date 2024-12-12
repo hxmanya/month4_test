@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+  {% include '../components/header.html' %}
+  <link rel="stylesheet" href="{% static 'main_page/tags.css' %}">
 
-{% for i in products_meal %}
+  <div class="products-container">
+    {% for i in products_meal %}
+      <div class="product-card">
+        <p class="product-name">{{ i.name }}</p>
+        <p class="product-price">{{ i.price }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  {% include '../components/footer.html' %}
 
-<p>{{ i.name }}</p>
-<p>{{ i.price }}</p>
-
-{% endfor %}
-</body>
-</html>

@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{% for i in products_drink %}
+{% load static %}
+  {% include '../components/header.html' %}
+  <link rel="stylesheet" href="{% static 'main_page/tags.css' %}">
 
-<p>{{ i.name }}</p>
-<p>{{ i.price }}</p>
+  <div class="products-container">
+    {% for i in products_drink %}
+      <div class="product-card">
+        <p class="product-name">{{ i.name }}</p>
+        <p class="product-price">{{ i.price }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  {% include '../components/footer.html' %}
 
-{% endfor %}
-</body>
-</html>
