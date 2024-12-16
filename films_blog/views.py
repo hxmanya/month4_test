@@ -1,6 +1,39 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
-from . import models
+from . import models, forms
+from django.views import generic
+
+class SearchView(generic.ListView):
+    template_name = 'show.html'
+    context_object_name = 'film_list'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return models.FilmModel.objects.filter(title__icontains=self.request.GET.get('q'))
+    
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['q'] = self.request.GET.get('q')
+        return context
+        
+
+
+
+
+
+#create_review_film
+def create_review_film_view(request):
+    if request.method == 'POST':
+        form = models.Review(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('todoList')
+
+    else:
+        form = forms.FilmForm()
+    return render(request, template_name='create_review.html', 
+                  context={'form': form})
+
 
 
 # получение id и получение полной информации о фильме
