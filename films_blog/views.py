@@ -21,7 +21,7 @@ class SearchView(generic.ListView):
 
 
 
-#create_review_film
+#create_review_film1111
 def create_review_film_view(request):
     if request.method == 'POST':
         form = models.Review(request.POST, request.FILES)
