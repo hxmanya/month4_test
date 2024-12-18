@@ -1,5 +1,10 @@
-<form  method="POST" enctype="multipart/form-data">
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'todo/create_todo.css' %}">
+<form method="POST" enctype="multipart/form-data" class="todo-form">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Изменить задачу</button>
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" class="submit-btn">Изменить задачу</button>
 </form>

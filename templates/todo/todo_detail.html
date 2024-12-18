@@ -1,5 +1,14 @@
-<h1>{{ todo_id.title }}</h1>
-<p>{{ todo_id.description }}</p>
-<p>{{ todo_id.choice_check }}</p>
-<p>{{ todo_id.film_by }}</p>
-<a href="{% url 'todoList' %}">На список задач</a>
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'todo/todo_detail.css' %}">
+<div class="todo-details">
+    <h1 class="todo-title">{{ todo_id.title }}</h1>
+    <p class="todo-description">{{ todo_id.description }}</p>
+    <p class="todo-status">
+        <strong>Статус:</strong> {{ todo_id.choice_check }}
+    </p>
+    <p class="todo-author">
+        <strong>Автор фильма:</strong> {{ todo_id.film_by }}
+    </p>
+    <a href="{% url 'todoList' %}" class="back-link">На список задач</a>
+</div>

@@ -1,0 +1,63 @@
+/* To-Do List Styles */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.todo-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.todo-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.todo-choice {
+    font-size: 1rem;
+    color: #666;
+}
+
+.todo-actions {
+    margin-top: 15px;
+}
+
+.todo-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.todo-link:hover {
+    color: #0056b3;
+}
+
+.todo-link.update {
+    color: #28a745;
+}
+
+.todo-link.update:hover {
+    color: #218838;
+}
+
+.todo-link.delete {
+    color: #dc3545;
+}
+
+.todo-link.delete:hover {
+    color: #c82333;
+}

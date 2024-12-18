@@ -1,13 +1,17 @@
-<ol>
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'todo/todo_list.css' %}">
+<ul class="todo-list">
     {% for i in todo_list %}
-    <li>
-        <h1>{{ i.title }}</h1>
-        <p>{{ i.choice_check }}</p>
-        <a href="/todo_list/{{i.id}}/">Подробнее</a>
-        <a href="/todo_list/{{i.id}}/update/">Изменить</a>
-        <a href="/todo_list/{{i.id}}/delete/">Удалить</a>
+    <li class="todo-item">
+        <h1 class="todo-title">{{ i.title }}</h1>
+        <p class="todo-choice">{{ i.choice_check }}</p>
+        <div class="todo-actions">
+            <a href="/todo_list/{{i.id}}/" class="todo-link">Подробнее</a>
+            <a href="/todo_list/{{i.id}}/update/" class="todo-link update">Изменить</a>
+            <a href="/todo_list/{{i.id}}/delete/" class="todo-link delete">Удалить</a>
+        </div>
     </li>
     {% endfor %}
 </ul>
 
-<!--  -->
