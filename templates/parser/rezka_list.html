@@ -1,0 +1,9 @@
+<ol>
+    {% for i in rezka %}
+    <li>
+        <h1>{{ i.title }}</h1>
+        <img src="{{ i.image }}" alt="" width="400" height="300">
+    </li>
+    <hr><hr><hr>
+    {% endfor %}
+</ol>

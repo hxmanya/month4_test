@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'films_blog',
     'foods_and_drinks',
     'todo',
+    'parser_app',
 ]
 
 MIDDLEWARE = [
