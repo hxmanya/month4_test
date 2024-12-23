@@ -8,7 +8,7 @@ class RegistrationView(CreateView):
     form_class = forms.CustomRegisterForm
     template_name =  "users/register.html"
     success_url = reverse_lazy('users:login')
-
+####
 class AuthLoginView(LoginView):
     form_class = AuthenticationForm
     template_name = "users/login.html"
