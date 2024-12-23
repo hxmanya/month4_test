@@ -6,6 +6,7 @@ class RezkaListView(generic.ListView):
     template_name = 'parser/rezka_list.html'
     context_object_name = 'rezka'
     model = models.RezkaModel
+    paginate_by = 3
     
     def get_queryset(self):
         return self.model.objects.all().order_by('-id')
