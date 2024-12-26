@@ -1,0 +1,52 @@
+/* Общий контейнер для деталей задачи */
+.todo-details {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Заголовок */
+.todo-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+    text-align: center;
+}
+
+/* Описание и текстовые элементы */
+.todo-description,
+.todo-status,
+.todo-author {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #555;
+}
+
+.todo-status strong,
+.todo-author strong {
+    color: #333;
+}
+
+/* Ссылка для возврата */
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}

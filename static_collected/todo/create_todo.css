@@ -1,0 +1,63 @@
+/* Общие стили для формы */
+.todo-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для групп ввода */
+.todo-form .form-group {
+    margin-bottom: 15px;
+}
+
+/* Стили для меток формы */
+.todo-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Стили для полей ввода и текстовых областей */
+.todo-form input[type="text"],
+.todo-form input[type="file"],
+.todo-form textarea,
+.todo-form select {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.todo-form input:focus,
+.todo-form textarea:focus,
+.todo-form select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Стили для кнопки */
+.todo-form .submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.todo-form .submit-btn:hover {
+    background-color: #0056b3;
+}
